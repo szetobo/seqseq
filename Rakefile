@@ -16,5 +16,9 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = false
 end
 
-
 task :default => :test
+
+desc 'open console'
+task :console do
+  sh 'pry -Ilib -r./test/dummy/config/environment.rb'
+end
