@@ -27,15 +27,15 @@ customize the sequence generation on sequence creation, subsequent call
 will ignore these options for existing sequence.
 
 ```ruby
-AutoSequence::next_val('product_id', 1)   # => 1
+AutoSequence.next_val('product_id', 1)   # => 1
 
-AutoSequence::next_val('product_id', 2, start_with: 11)  # => 11
-AutoSequence::next_val('product_id', 2, start_with: 11)  # => 12, start_with has no effect
-AutoSequence::next_val('product_id', 2, start_with: 11)  # => 13, start_with has no effect
+AutoSequence.next_val('product_id', 2, start_with: 11)  # => 11
+AutoSequence.next_val('product_id', 2, start_with: 11)  # => 12, start_with has no effect
+AutoSequence.next_val('product_id', 2, start_with: 11)  # => 13, start_with has no effect
 
-AutoSequence::next_val('product_id', 3, step_by: 5)   # => 1
-AutoSequence::next_val('product_id', 3, step_by: 10)  # => 6,  step_by has no effect
-AutoSequence::next_val('product_id', 3, step_by: 20)  # => 11, step_by has no effect
+AutoSequence.next_val('product_id', 3, step_by: 5)   # => 1
+AutoSequence.next_val('product_id', 3, step_by: 10)  # => 6,  step_by has no effect
+AutoSequence.next_val('product_id', 3, step_by: 20)  # => 11, step_by has no effect
 ```
 
 ## Contributing
