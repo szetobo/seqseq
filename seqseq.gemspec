@@ -7,7 +7,7 @@ require "seqseq/version"
 Gem::Specification.new do |s|
   s.name        = "seqseq"
   s.version     = SeqSeq::VERSION
-  s.authors     = ['Szetobo']
+  s.authors     = ['Szeto Bo']
   s.email       = ['szetobo@gmail.com']
   s.homepage    = 'https://github.com/szetobo/seqseq'
   s.summary     = %q{A sequence number generator}

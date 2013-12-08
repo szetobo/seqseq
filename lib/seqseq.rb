@@ -11,7 +11,11 @@ module SeqSeq
 
         result = nil
         begin
-          rec = find_or_create_by_seq_name_and_criteria(seq_name.to_s, criteria.to_s)
+          rec = if Rails.version > '4.0'
+                  find_or_create_by(:seq_name => seq_name.to_s, :criteria => criteria.to_s)
+                else
+                  find_or_create_by_seq_name_and_criteria(seq_name.to_s, criteria.to_s)
+                end
           rec.with_lock do
 
             rec.start_with ||= opts[:start_with]
